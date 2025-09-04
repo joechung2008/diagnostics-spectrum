@@ -1,6 +1,5 @@
 import {
   ActionButton,
-  Button,
   Item,
   Menu,
   MenuTrigger,
@@ -110,7 +109,7 @@ const App: React.FC = () => {
     <div className={styles.flexbox}>
       <div style={{ display: "flex", gap: "8px", padding: "8px" }}>
         <MenuTrigger>
-          <Button variant="primary">{environmentName}</Button>
+          <ActionButton>{environmentName}</ActionButton>
           <Menu
             onAction={(key) => {
               const env = environments.find((e) => e.key === key);

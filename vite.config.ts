@@ -16,6 +16,13 @@ export default defineConfig({
       },
     },
   },
+  // Workaround for "process is not defined" error when clicking Button in MenuTrigger.
+  define: {
+    global: "globalThis",
+    process: {
+      env: {},
+    },
+  },
   plugins: [react()],
   test: {
     coverage: {
