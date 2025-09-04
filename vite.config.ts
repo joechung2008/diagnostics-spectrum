@@ -7,11 +7,7 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks(id) {
-          if (id.includes("@adobe/react-spectrum-workflow")) {
-            return "react-spectrum-workflow";
-          } else if (id.includes("@adobe/react-spectrum-ui")) {
-            return "react-spectrum-ui";
-          } else if (id.includes("@adobe/react-spectrum")) {
+          if (id.includes("@adobe/react-spectrum")) {
             return "react-spectrum";
           } else {
             return null;
